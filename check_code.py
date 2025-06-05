@@ -1,7 +1,8 @@
 import subprocess
 
 print("Bandit: \n*******")
-subprocess.run(['bandit', '*.py'])
+res = subprocess.run(['bandit', '*.py'], shell=False)
+    
 
 print("Pip-audit: \n**********")
-subprocess.run(['pip-audit'])
+subprocess.run(['pip-audit'], shell=False)
